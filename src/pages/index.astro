@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
-
+import Greeting from "../components/Greeting"
 const pageTitle = 'Pagina de inicio'
 ---
 
@@ -9,5 +9,7 @@ const pageTitle = 'Pagina de inicio'
 	<p>Sitio de pruebas con el framework Astro. El cual es sirve para generar paginas web, que sean pensadas para renderizarse en el servidor o 
 		seguir esquemas propio de diseño similares a los ofrecidos por wordpress y en donde la optimizacion del uso por parte del cliente es primordial.
 	</p>
+	<Greeting messages={["Hola", "Que tal", "Hola a todos"]}/>
+	<Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 </BaseLayout>
 
